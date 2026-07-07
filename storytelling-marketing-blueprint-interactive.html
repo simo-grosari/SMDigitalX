@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Storytelling Marketing Blueprint</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&family=Raleway:wght@600;700&display=swap');
+
+    :root {
+      --charcoal: #2C3E50;
+      --orange: #E67E22;
+      --paper: #ffffff;
+      --mist: #ECF0F1;
+      --slate: #34495E;
+      --cream: #FBF6EF;
+      --green: #2E8B57;
+      --yellow: #F6C85F;
+      --red: #C95C54;
+      --line: #D9E0E4;
+      --shadow: 0 12px 28px rgba(44, 62, 80, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--mist);
+      color: var(--slate);
+      font-family: "Open Sans", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--charcoal);
+      color: #fff;
+      padding: 14px 22px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    }
+
+    .header-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange), #F2B879);
+      display: grid;
+      place-items: center;
+      color: var(--charcoal);
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: Montserrat, Arial, sans-serif;
+      color: var(--charcoal);
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .app-header h1 {
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      opacity: .82;
+      margin-top: 2px;
+    }
+
+    .actions, .tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 13px;
+      background: #fff;
+      color: var(--charcoal);
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+    }
+
+    button:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,.18); }
+    .primary { background: var(--orange); color: #fff; }
+    .ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.25); }
+    .tabs { max-width: 1220px; margin: 12px auto 0; }
+    .tab-button.active { background: var(--orange); color: #fff; }
+
+    main {
+      max-width: 1220px;
+      margin: 26px auto 58px;
+      padding: 0 22px;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .page {
+      background: var(--paper);
+      border-radius: 8px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange), #F3C391, var(--charcoal));
+    }
+
+    .chapter {
+      position: absolute;
+      right: 28px;
+      top: 20px;
+      color: rgba(44,62,80,.45);
+      font: 700 12px Raleway, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin: 0 120px 8px 0;
+    }
+
+    .accent-line {
+      width: 96px;
+      height: 4px;
+      border-radius: 3px;
+      background: var(--orange);
+      margin: 14px 0 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--cream);
+      border: 1px solid #F0DFC8;
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .summary-card {
+      background: #fff;
+      border-left: 6px solid var(--orange);
+      box-shadow: var(--shadow);
+      min-height: 130px;
+    }
+
+    .summary-card .number {
+      display: block;
+      font: 800 34px Montserrat, sans-serif;
+      color: var(--charcoal);
+      line-height: 1;
+      margin-top: 8px;
+    }
+
+    .summary-card .label {
+      font: 700 12px Raleway, sans-serif;
+      text-transform: uppercase;
+      color: rgba(52,73,94,.72);
+    }
+
+    .wide { grid-column: span 12; }
+    .half { grid-column: span 6; }
+    .third { grid-column: span 4; }
+    .two-third { grid-column: span 8; }
+    .quarter { grid-column: span 3; }
+
+    .progress-shell {
+      height: 22px;
+      border-radius: 99px;
+      background: #DCE3E7;
+      overflow: hidden;
+      border: 1px solid #CAD3D8;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--orange), #F2B879);
+      transition: width .25s ease;
+    }
+
+    .bar-chart {
+      display: grid;
+      gap: 12px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 148px 1fr 52px;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .bar-track {
+      height: 16px;
+      background: #DCE3E7;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .bar {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--orange);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    th {
+      background: var(--charcoal);
+      color: #fff;
+      text-align: left;
+      font: 700 12px Raleway, sans-serif;
+      text-transform: uppercase;
+      padding: 10px;
+    }
+
+    td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      vertical-align: top;
+      min-height: 42px;
+    }
+
+    td[contenteditable="true"], .fill, textarea, input, select {
+      background: #F7F9FA;
+      border: 1px solid #D9E0E4;
+      border-radius: 6px;
+      padding: 10px;
+      font: inherit;
+      color: var(--slate);
+      width: 100%;
+    }
+
+    td[contenteditable="true"] {
+      min-width: 120px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 118px;
+      resize: vertical;
+    }
+
+    select { appearance: auto; }
+
+    .row-good td { background: #EAF6EF; }
+    .row-watch td { background: #FFF7DE; }
+    .row-weak td { background: #FBEDEA; }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 84px;
+    }
+
+    .check-item input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--orange); }
+    .check-item span { font-weight: 700; display: block; }
+    .check-item small { display: block; color: rgba(52,73,94,.76); margin-top: 3px; }
+
+    .formula {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      counter-reset: step;
+    }
+
+    .formula-step {
+      border: 1px solid #EBD6BC;
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px;
+      position: relative;
+      min-height: 180px;
+    }
+
+    .formula-step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .prompt-box {
+      border-left: 5px solid var(--orange);
+      background: var(--cream);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      font-family: Raleway, sans-serif;
+      font-weight: 600;
+    }
+
+    .script-section {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: #fff;
+      margin-bottom: 16px;
+    }
+
+    .script-section h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 99px;
+      padding: 4px 10px;
+      background: var(--orange);
+      color: #fff;
+      font: 700 11px Raleway, sans-serif;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .case-study {
+      display: grid;
+      grid-template-columns: 220px 1fr 1fr;
+      gap: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #fff;
+    }
+
+    .case-label {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 18px;
+    }
+
+    .case-label h3 { color: #fff; font-size: 19px; }
+    .before { border-left: 5px solid var(--red); padding: 18px; }
+    .after { border-left: 5px solid var(--green); padding: 18px; }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .resource {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .resource h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .resource ul { margin: 8px 0 0; padding-left: 20px; }
+
+    .page-number {
+      text-align: center;
+      color: rgba(52,73,94,.55);
+      font-size: 12px;
+      margin-top: 26px;
+    }
+
+    #toast {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      background: var(--charcoal);
+      color: #fff;
+      border-radius: 8px;
+      padding: 13px 16px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+      z-index: 100;
+      font-weight: 700;
+    }
+
+    #toast.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      .header-inner { align-items: flex-start; flex-direction: column; }
+      .half, .third, .two-third, .quarter { grid-column: span 12; }
+      .checklist, .formula, .resource-grid { grid-template-columns: 1fr; }
+      .case-study { grid-template-columns: 1fr; }
+      .page { padding: 28px 20px; }
+      .section-title { margin-right: 0; font-size: 24px; }
+      .chapter { position: static; display: block; margin-bottom: 12px; }
+      .bar-row { grid-template-columns: 1fr; gap: 5px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 18mm 16mm; }
+      body { background: #fff; color: #222; }
+      .app-header, .tabs, button, #toast, .screen-only { display: none !important; }
+      main { max-width: none; margin: 0; padding: 0; }
+      .tab-panel { display: block !important; }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        page-break-after: always;
+        break-after: page;
+      }
+      .page::before { display: none; }
+      .chapter { top: 0; right: 0; }
+      td[contenteditable="true"], .fill, textarea, input, select {
+        border: 1px solid #C9CDD1;
+        background: #fff;
+      }
+      textarea { min-height: 96px; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">SB</div>
+        <div>
+          <h1>Ultimate Storytelling Marketing Blueprint</h1>
+          <div class="subtitle">Brand Narrative & Sales Funnel Templates for Entrepreneurs</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="primary" id="saveBtn" type="button">Save Progress</button>
+        <button class="ghost" id="loadBtn" type="button">Load Progress</button>
+        <button class="ghost" id="printBtn" type="button">Print</button>
+        <button class="ghost" id="downloadBtn" type="button">Download Data</button>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Workbook tabs">
+      <button class="tab-button active" type="button" data-tab="dashboard">Dashboard</button>
+      <button class="tab-button" type="button" data-tab="data">Data Entry</button>
+      <button class="tab-button" type="button" data-tab="summary">Summary</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tab-panel active" id="dashboard">
+      <article class="page">
+        <span class="chapter">Dashboard</span>
+        <h2 class="section-title">Story Funnel Progress Dashboard</h2>
+        <div class="accent-line"></div>
+        <div class="grid">
+          <div class="summary-card card third">
+            <span class="label">Overall Completion</span>
+            <span class="number" id="completionText">0%</span>
+            <div class="progress-shell" aria-label="Completion progress"><div class="progress-fill" id="completionFill"></div></div>
+          </div>
+          <div class="summary-card card third">
+            <span class="label">Best Positioning Score</span>
+            <span class="number" id="bestScore">0</span>
+            <small>Based on clarity, uniqueness, and conversion pull.</small>
+          </div>
+          <div class="summary-card card third">
+            <span class="label">Quick Wins Complete</span>
+            <span class="number" id="quickWinCount">0/15</span>
+            <small>First-week actions that create visible momentum.</small>
+          </div>
+          <div class="card two-third">
+            <h3>Completion By Asset</h3>
+            <div class="bar-chart" id="assetChart">
+              <div class="bar-row"><span>Quick Start</span><div class="bar-track"><span class="bar" data-bar="quick"></span></div><strong data-bar-label="quick">0%</strong></div>
+              <div class="bar-row"><span>Positioning</span><div class="bar-track"><span class="bar" data-bar="positioning"></span></div><strong data-bar-label="positioning">0%</strong></div>
+              <div class="bar-row"><span>Sales Page</span><div class="bar-track"><span class="bar" data-bar="sales"></span></div><strong data-bar-label="sales">0%</strong></div>
+              <div class="bar-row"><span>Video Scripts</span><div class="bar-track"><span class="bar" data-bar="video"></span></div><strong data-bar-label="video">0%</strong></div>
+              <div class="bar-row"><span>Launch Actions</span><div class="bar-track"><span class="bar" data-bar="actions"></span></div><strong data-bar-label="actions">0%</strong></div>
+            </div>
+          </div>
+          <div class="card third">
+            <h3>Priority Focus</h3>
+            <label>Business Stage
+              <select class="tracked" id="businessStage" data-section="dashboard">
+                <option>Pre-launch service</option>
+                <option selected>Booked but inconsistent</option>
+                <option>Ready to scale</option>
+                <option>Refining premium offer</option>
+              </select>
+            </label>
+            <label>Primary Funnel Goal
+              <select class="tracked" id="funnelGoal" data-section="dashboard">
+                <option>Clarify my niche</option>
+                <option selected>Improve sales page conversions</option>
+                <option>Book more discovery calls</option>
+                <option>Launch a new offer</option>
+              </select>
+            </label>
+            <div class="prompt-box">Use this workbook to build one clear story: who you help, what changes for them, why your method is different, and what they should do next.</div>
+          </div>
+        </div>
+        <div class="page-number">Dashboard</div>
+      </article>
+    </section>
+
+    <section class="tab-panel" id="data">
+      <article class="page">
+        <span class="chapter">03</span>
+        <h2 class="section-title">Quick Start Checklist</h2>
+        <div class="accent-line"></div>
+        <p>Complete these 15 first-week actions before building the full sales narrative. Each action is designed to clarify your message quickly and produce buyer-facing assets immediately.</p>
+        <div class="checklist" data-section-wrap="quick">
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox" checked><span>Define your ideal client<small>Name the person, problem, and buying trigger.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox" checked><span>Write the before state<small>Capture the frustration in buyer language.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Write the after state<small>Describe the measurable transformation.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>List 5 proof points<small>Results, process wins, testimonials, metrics.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Choose your core promise<small>One outcome your audience wants most.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Identify objections<small>Price, time, trust, complexity, readiness.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Pick one signature method<small>Name the process that makes you distinct.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Write one positioning line<small>Use the builder below for three versions.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Map your customer story<small>Hero, problem, guide, plan, success.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Draft your sales page hook<small>Lead with a specific client desire.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Create CTA wording<small>Make the next action obvious and low-friction.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Choose 3 story angles<small>Client win, founder insight, common mistake.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Draft one short video<small>Use a platform template in this workbook.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Update one website section<small>Apply your new hook to the hero area.</small></span></label>
+          <label class="check-item"><input class="tracked quick-check" data-section="quick" type="checkbox"><span>Save your final message bank<small>Export your workbook data for reuse.</small></span></label>
+        </div>
+        <div class="page-number">Page 3</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">04</span>
+        <h2 class="section-title">Storytelling Formula Cheat Sheet</h2>
+        <div class="accent-line"></div>
+        <div class="formula">
+          <div class="formula-step"><h3>Client As Hero</h3><p>Your buyer is not supporting your brand story. Your brand supports their transformation.</p><div class="fill tracked" data-section="sales" contenteditable="true">My client wants to become the kind of person who can book premium clients with confidence.</div></div>
+          <div class="formula-step"><h3>Visible Problem</h3><p>Show the cost of staying stuck: lost leads, weak trust, wasted effort, unclear value.</p><div class="fill tracked" data-section="sales" contenteditable="true">Right now they feel scattered because their message changes every time they write.</div></div>
+          <div class="formula-step"><h3>Guide With Method</h3><p>Your expertise becomes the bridge from confusion to buyer confidence.</p><div class="fill tracked" data-section="sales" contenteditable="true">My method turns raw experience into a repeatable story-led funnel.</div></div>
+          <div class="formula-step"><h3>Plan And Proof</h3><p>Give a simple sequence and concrete evidence that your promise is believable.</p><div class="fill tracked" data-section="sales" contenteditable="true">First clarify the audience, then build the promise, then convert it into page copy.</div></div>
+          <div class="formula-step"><h3>Action And Future</h3><p>Invite the buyer into a specific next step and show the future they are choosing.</p><div class="fill tracked" data-section="sales" contenteditable="true">Book a strategy session and leave with the message your market remembers.</div></div>
+        </div>
+        <div class="prompt-box" style="margin-top:18px;">One-sentence formula: I help <strong>[hero]</strong> overcome <strong>[problem]</strong> through <strong>[method]</strong> so they can <strong>[future outcome]</strong>.</div>
+        <div class="page-number">Page 4</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">06</span>
+        <h2 class="section-title">Brand Positioning Statement Builder</h2>
+        <div class="accent-line"></div>
+        <p>Build three positioning options, then score each from 1 to 5. The strongest version should be specific, outcome-led, differentiated, and easy for a buyer to repeat.</p>
+        <table id="positioningTable">
+          <thead>
+            <tr><th>Version</th><th>Ideal Client</th><th>Specific Outcome</th><th>Unique Method</th><th>Competitor Difference</th><th>Clarity</th><th>Difference</th><th>Buyer Pull</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">service founders stuck rewriting their website copy</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">book more qualified discovery calls</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">a story-led sales page framework</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">generic copy templates that ignore buyer psychology</td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option></select></td>
+              <td class="total">14</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">coaches with strong expertise but vague offers</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">turn their process into premium positioning</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">a client transformation narrative map</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">one-size-fits-all branding exercises</td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></td>
+              <td class="total">11</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">creative consultants ready to sell a signature service</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">explain their value in one confident sentence</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">a proof-backed brand story system</td>
+              <td contenteditable="true" class="tracked" data-section="positioning">portfolio-first messaging that lacks sales structure</td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option></select></td>
+              <td><select class="score tracked" data-section="positioning"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></td>
+              <td class="total">13</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="prompt-box" style="margin-top:18px;">Template: We help <strong>[ideal client]</strong> achieve <strong>[specific outcome]</strong> by <strong>[unique method]</strong> unlike <strong>[competitor difference]</strong>.</div>
+        <div class="page-number">Page 6</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">08</span>
+        <h2 class="section-title">Sales Page Storytelling Script</h2>
+        <div class="accent-line"></div>
+        <div class="script-section">
+          <h3><span class="badge">1</span> Hook</h3>
+          <p>Lead with a precise result, a sharp buyer tension, or a belief-shifting promise.</p>
+          <textarea class="tracked" data-section="sales">Stop sounding like every other expert in your market. Build a story-led sales page that shows the right clients why your method is the obvious next step.</textarea>
+        </div>
+        <div class="script-section">
+          <h3><span class="badge">2</span> Problem Acknowledgment</h3>
+          <p>Mirror what your buyer has tried and why it has not created the conversion lift they expected.</p>
+          <textarea class="tracked" data-section="sales">You have testimonials, experience, and a real service. But when it is time to write your website, everything gets flattened into generic phrases like "personalized support" and "strategic solutions."</textarea>
+        </div>
+        <div class="script-section">
+          <h3><span class="badge">3</span> Transformation Story</h3>
+          <p>Show the before-to-after journey with emotional and practical outcomes.</p>
+          <textarea class="tracked" data-section="sales">Imagine opening your homepage and seeing a message that makes qualified clients think, "This is exactly what I have been looking for." Your story finally connects your process to their desired future.</textarea>
+        </div>
+        <div class="script-section">
+          <h3><span class="badge">4</span> Solution Framework</h3>
+          <p>Name the process, show the steps, and make your expertise easy to trust.</p>
+          <textarea class="tracked" data-section="sales">The Story Funnel Method clarifies your hero client, frames the urgent problem, packages your method, proves the promise, and turns the page into a confident call to action.</textarea>
+        </div>
+        <div class="script-section">
+          <h3><span class="badge">5</span> Social Proof And CTA</h3>
+          <p>Use proof that reduces risk, then invite one clear next action.</p>
+          <textarea class="tracked" data-section="sales">Clients use this framework to replace vague copy with buyer-specific language, sharper offers, and clearer inquiry paths. Start with the blueprint today and build the message your market remembers.</textarea>
+        </div>
+        <div class="page-number">Page 8</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">10</span>
+        <h2 class="section-title">Video Script Templates Bonus</h2>
+        <div class="accent-line"></div>
+        <div class="grid">
+          <div class="card third">
+            <h3>TikTok 60-Second Story</h3>
+            <p><strong>0-5s:</strong> Pattern interrupt. <strong>5-20s:</strong> relatable problem. <strong>20-45s:</strong> story or framework. <strong>45-60s:</strong> CTA.</p>
+            <textarea class="tracked" data-section="video">If your website says what you do but not why buyers should care, try this...</textarea>
+          </div>
+          <div class="card third">
+            <h3>Instagram Reel 30-Second Proof</h3>
+            <p><strong>0-3s:</strong> bold claim. <strong>3-15s:</strong> before/after. <strong>15-25s:</strong> one lesson. <strong>25-30s:</strong> comment or link CTA.</p>
+            <textarea class="tracked" data-section="video">Before: "I help with strategy." After: "I help coaches turn expertise into booked calls."</textarea>
+          </div>
+          <div class="card third">
+            <h3>YouTube Short 45-Second Mini Lesson</h3>
+            <p><strong>0-5s:</strong> question. <strong>5-30s:</strong> three-part teaching point. <strong>30-45s:</strong> next step.</p>
+            <textarea class="tracked" data-section="video">The fastest way to improve your sales page is to stop making yourself the hero...</textarea>
+          </div>
+        </div>
+        <div class="page-number">Page 10</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">Data</span>
+        <h2 class="section-title">Launch Action Tracker</h2>
+        <div class="accent-line"></div>
+        <p>Use this working table to turn the messaging assets into visible sales activity. Impact and confidence update row color automatically.</p>
+        <table id="actionTable">
+          <thead>
+            <tr><th>Asset / Action</th><th>Category</th><th>Owner</th><th>Status</th><th>Impact %</th><th>Confidence %</th><th>Priority Score</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td contenteditable="true" class="tracked" data-section="actions">Rewrite website hero headline</td><td><select class="tracked" data-section="actions"><option selected>Sales Page</option><option>Email</option><option>Video</option><option>Lead Magnet</option><option>Offer</option></select></td><td contenteditable="true" class="tracked" data-section="actions">Founder</td><td><select class="tracked status" data-section="actions"><option>Not Started</option><option selected>In Progress</option><option>Complete</option></select></td><td><input class="tracked impact" data-section="actions" type="number" min="0" max="100" value="90"></td><td><input class="tracked confidence" data-section="actions" type="number" min="0" max="100" value="80"></td><td class="priority">72</td><td contenteditable="true" class="tracked" data-section="actions">Use strongest positioning statement.</td></tr>
+            <tr><td contenteditable="true" class="tracked" data-section="actions">Record first proof-based Reel</td><td><select class="tracked" data-section="actions"><option>Sales Page</option><option>Email</option><option selected>Video</option><option>Lead Magnet</option><option>Offer</option></select></td><td contenteditable="true" class="tracked" data-section="actions">Founder</td><td><select class="tracked status" data-section="actions"><option selected>Not Started</option><option>In Progress</option><option>Complete</option></select></td><td><input class="tracked impact" data-section="actions" type="number" min="0" max="100" value="65"></td><td><input class="tracked confidence" data-section="actions" type="number" min="0" max="100" value="70"></td><td class="priority">46</td><td contenteditable="true" class="tracked" data-section="actions">Use before/after messaging comparison.</td></tr>
+            <tr><td contenteditable="true" class="tracked" data-section="actions">Add objection answer to sales page</td><td><select class="tracked" data-section="actions"><option selected>Sales Page</option><option>Email</option><option>Video</option><option>Lead Magnet</option><option>Offer</option></select></td><td contenteditable="true" class="tracked" data-section="actions">Founder</td><td><select class="tracked status" data-section="actions"><option>Not Started</option><option selected>In Progress</option><option>Complete</option></select></td><td><input class="tracked impact" data-section="actions" type="number" min="0" max="100" value="78"></td><td><input class="tracked confidence" data-section="actions" type="number" min="0" max="100" value="75"></td><td class="priority">59</td><td contenteditable="true" class="tracked" data-section="actions">Address "I can write it myself."</td></tr>
+            <tr><td contenteditable="true" class="tracked" data-section="actions">Draft welcome email story</td><td><select class="tracked" data-section="actions"><option>Sales Page</option><option selected>Email</option><option>Video</option><option>Lead Magnet</option><option>Offer</option></select></td><td contenteditable="true" class="tracked" data-section="actions">VA</td><td><select class="tracked status" data-section="actions"><option selected>Not Started</option><option>In Progress</option><option>Complete</option></select></td><td><input class="tracked impact" data-section="actions" type="number" min="0" max="100" value="55"></td><td><input class="tracked confidence" data-section="actions" type="number" min="0" max="100" value="62"></td><td class="priority">34</td><td contenteditable="true" class="tracked" data-section="actions">Turn founder origin story into trust builder.</td></tr>
+            <tr><td contenteditable="true" class="tracked" data-section="actions">Create lead magnet CTA block</td><td><select class="tracked" data-section="actions"><option>Sales Page</option><option>Email</option><option>Video</option><option selected>Lead Magnet</option><option>Offer</option></select></td><td contenteditable="true" class="tracked" data-section="actions">Founder</td><td><select class="tracked status" data-section="actions"><option>Not Started</option><option>In Progress</option><option selected>Complete</option></select></td><td><input class="tracked impact" data-section="actions" type="number" min="0" max="100" value="82"></td><td><input class="tracked confidence" data-section="actions" type="number" min="0" max="100" value="88"></td><td class="priority">72</td><td contenteditable="true" class="tracked" data-section="actions">Invite audit call at end of resource.</td></tr>
+          </tbody>
+        </table>
+        <div class="page-number">Launch Tracker</div>
+      </article>
+    </section>
+
+    <section class="tab-panel" id="summary">
+      <article class="page">
+        <span class="chapter">16</span>
+        <h2 class="section-title">Industry-Specific Customization Examples</h2>
+        <div class="accent-line"></div>
+        <div class="case-study">
+          <div class="case-label"><h3>Virtual Assistant</h3><p>Offer: operations support for booked-out consultants.</p></div>
+          <div class="before"><h4>Before</h4><p>"I provide admin support for entrepreneurs who need help with inboxes, calendars, and tasks."</p><p>Weakness: commodity service, no transformation, no clear buyer trigger.</p></div>
+          <div class="after"><h4>After</h4><p>"I help booked-out consultants reclaim 8+ hours a week by turning scattered admin into a calm client operations system."</p><p>Story angle: from reactive overload to protected delivery capacity.</p></div>
+        </div>
+        <div class="case-study">
+          <div class="case-label"><h3>Executive Coach</h3><p>Offer: leadership coaching for newly promoted directors.</p></div>
+          <div class="before"><h4>Before</h4><p>"I coach leaders to communicate better and build confidence at work."</p><p>Weakness: broad outcome, low urgency, sounds similar to every coach.</p></div>
+          <div class="after"><h4>After</h4><p>"I help newly promoted directors lead high-stakes conversations with calm authority so they can earn trust faster in their first 90 days."</p><p>Story angle: from hidden uncertainty to visible executive presence.</p></div>
+        </div>
+        <div class="case-study">
+          <div class="case-label"><h3>Brand Designer</h3><p>Offer: strategic identity design for premium service brands.</p></div>
+          <div class="before"><h4>Before</h4><p>"I create beautiful branding and logos for small businesses."</p><p>Weakness: aesthetic-only positioning, no business case, unclear value.</p></div>
+          <div class="after"><h4>After</h4><p>"I help premium service providers turn expert-level value into a visual identity that attracts higher-trust, higher-budget clients."</p><p>Story angle: from polished visuals to market confidence and pricing power.</p></div>
+        </div>
+        <div class="page-number">Page 16</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">18</span>
+        <h2 class="section-title">Resources & Next Steps</h2>
+        <div class="accent-line"></div>
+        <div class="resource-grid">
+          <div class="resource"><h3>Copywriting Tools</h3><ul><li>Google Docs for drafting and revision history</li><li>Grammarly or Hemingway for clarity checks</li><li>AnswerThePublic for audience language research</li><li>ChatGPT or Claude for alternate hook drafts</li></ul></div>
+          <div class="resource"><h3>Video Editing Software</h3><ul><li>CapCut for fast short-form editing</li><li>Canva Video for branded templates</li><li>Descript for transcript-led edits</li><li>Adobe Premiere Pro for advanced workflows</li></ul></div>
+          <div class="resource"><h3>Legal And Business Documents</h3><ul><li>TermsFeed for policy generators</li><li>Rocket Lawyer for service agreement templates</li><li>Local attorney review for client contracts</li><li>Invoice and proposal tools inside your CRM</li></ul></div>
+          <div class="resource"><h3>Recommended Storytelling Books</h3><ul><li>Building a StoryBrand by Donald Miller</li><li>Made to Stick by Chip Heath and Dan Heath</li><li>Obviously Awesome by April Dunford</li><li>They Ask, You Answer by Marcus Sheridan</li></ul></div>
+          <div class="resource"><h3>Canva And Spreadsheet Assets</h3><ul><li>Canva: create social proof slides and video covers</li><li>Google Sheets: track hook tests, CTA clicks, calls booked</li><li>Use exported workbook data as your copy bank</li></ul></div>
+          <div class="resource"><h3>Next Steps</h3><ul><li>Choose the highest-scoring positioning statement</li><li>Update one sales page section this week</li><li>Record one short-form proof video</li><li>Export your completed workbook data</li></ul></div>
+        </div>
+        <div class="page-number">Page 18</div>
+      </article>
+
+      <article class="page">
+        <span class="chapter">Summary</span>
+        <h2 class="section-title">Completed Message Bank</h2>
+        <div class="accent-line"></div>
+        <div class="grid">
+          <div class="card half"><h3>Best Positioning Statement</h3><p id="bestStatement">Your strongest statement will appear after scoring.</p></div>
+          <div class="card half"><h3>Recommended Next Action</h3><p id="nextAction">Complete the first-week checklist, then refine your sales page hook.</p></div>
+          <div class="card wide"><h3>Export Preview</h3><textarea id="exportPreview" readonly></textarea></div>
+        </div>
+        <div class="page-number">Summary</div>
+      </article>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite">Saved</div>
+
+  <script>
+    const storageKey = "ultimateStorytellingBlueprintProgress";
+    const trackedSelector = ".tracked, td[contenteditable='true'], .fill[contenteditable='true'], textarea";
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function elementValue(el) {
+      if (el.type === "checkbox") return el.checked;
+      if (el.isContentEditable) return el.innerHTML;
+      return el.value;
+    }
+
+    function setElementValue(el, value) {
+      if (el.type === "checkbox") el.checked = Boolean(value);
+      else if (el.isContentEditable) el.innerHTML = value || "";
+      else el.value = value || "";
+    }
+
+    function collectData() {
+      return Array.from(document.querySelectorAll(trackedSelector)).map((el, index) => ({
+        index,
+        tag: el.tagName,
+        section: el.dataset.section || "",
+        value: elementValue(el)
+      }));
+    }
+
+    function saveProgress(silent = false) {
+      localStorage.setItem(storageKey, JSON.stringify(collectData()));
+      if (!silent) showToast("Progress saved");
+    }
+
+    function loadProgress() {
+      const saved = localStorage.getItem(storageKey);
+      if (!saved) {
+        showToast("No saved progress found");
+        return;
+      }
+      const data = JSON.parse(saved);
+      const elements = Array.from(document.querySelectorAll(trackedSelector));
+      data.forEach(item => {
+        if (elements[item.index]) setElementValue(elements[item.index], item.value);
+      });
+      updateAll();
+      showToast("Progress loaded");
+    }
+
+    function textComplete(el) {
+      const value = el.isContentEditable ? el.textContent : (el.type === "checkbox" ? el.checked : el.value);
+      if (typeof value === "boolean") return value;
+      return String(value || "").trim().length > 8;
+    }
+
+    function completionFor(section) {
+      const items = Array.from(document.querySelectorAll(`[data-section="${section}"]`));
+      if (!items.length) return 0;
+      return Math.round(items.filter(textComplete).length / items.length * 100);
+    }
+
+    function updateCompletion() {
+      const sections = ["quick", "positioning", "sales", "video", "actions"];
+      const values = sections.map(completionFor);
+      const overall = Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
+      document.getElementById("completionText").textContent = overall + "%";
+      document.getElementById("completionFill").style.width = overall + "%";
+      sections.forEach((section, index) => {
+        const bar = document.querySelector(`[data-bar="${section}"]`);
+        const label = document.querySelector(`[data-bar-label="${section}"]`);
+        if (bar) bar.style.width = values[index] + "%";
+        if (label) label.textContent = values[index] + "%";
+      });
+      const checked = document.querySelectorAll(".quick-check:checked").length;
+      document.getElementById("quickWinCount").textContent = checked + "/15";
+    }
+
+    function updatePositioningScores() {
+      let bestScore = -1;
+      let bestRow = null;
+      document.querySelectorAll("#positioningTable tbody tr").forEach(row => {
+        const scores = Array.from(row.querySelectorAll(".score")).map(select => Number(select.value || 0));
+        const total = scores.reduce((sum, value) => sum + value, 0);
+        row.querySelector(".total").textContent = total;
+        row.classList.remove("row-good", "row-watch", "row-weak");
+        row.classList.add(total >= 13 ? "row-good" : total >= 10 ? "row-watch" : "row-weak");
+        if (total > bestScore) {
+          bestScore = total;
+          bestRow = row;
+        }
+      });
+      document.getElementById("bestScore").textContent = Math.max(bestScore, 0);
+      if (bestRow) {
+        const cells = bestRow.querySelectorAll("td");
+        document.getElementById("bestStatement").textContent =
+          `We help ${cells[1].textContent.trim()} achieve ${cells[2].textContent.trim()} by ${cells[3].textContent.trim()} unlike ${cells[4].textContent.trim()}.`;
+      }
+    }
+
+    function updateActionRows() {
+      let bestAction = "";
+      let bestScore = -1;
+      document.querySelectorAll("#actionTable tbody tr").forEach(row => {
+        const impact = Number(row.querySelector(".impact").value || 0);
+        const confidence = Number(row.querySelector(".confidence").value || 0);
+        const priority = Math.round((impact * confidence) / 100);
+        row.querySelector(".priority").textContent = priority;
+        row.classList.remove("row-good", "row-watch", "row-weak");
+        row.classList.add(priority >= 65 ? "row-good" : priority >= 45 ? "row-watch" : "row-weak");
+        if (priority > bestScore) {
+          bestScore = priority;
+          bestAction = row.cells[0].textContent.trim();
+        }
+      });
+      if (bestAction) document.getElementById("nextAction").textContent = `Highest-leverage next action: ${bestAction}.`;
+    }
+
+    function buildExportText() {
+      const lines = [];
+      lines.push("ULTIMATE STORYTELLING MARKETING BLUEPRINT");
+      lines.push("Generated message bank");
+      lines.push("");
+      lines.push("Business Stage: " + document.getElementById("businessStage").value);
+      lines.push("Primary Funnel Goal: " + document.getElementById("funnelGoal").value);
+      lines.push("");
+      lines.push("Best Positioning Statement:");
+      lines.push(document.getElementById("bestStatement").textContent);
+      lines.push("");
+      lines.push("Sales Page Script:");
+      document.querySelectorAll("#data .script-section textarea").forEach((textarea, index) => {
+        lines.push(`${index + 1}. ${textarea.value.trim()}`);
+      });
+      lines.push("");
+      lines.push("Launch Tracker:");
+      document.querySelectorAll("#actionTable tbody tr").forEach(row => {
+        lines.push(`- ${row.cells[0].textContent.trim()} | ${row.querySelector(".status").value} | Priority ${row.querySelector(".priority").textContent}`);
+      });
+      return lines.join("\n");
+    }
+
+    function updateExportPreview() {
+      document.getElementById("exportPreview").value = buildExportText();
+    }
+
+    function downloadData() {
+      updateAll();
+      const blob = new Blob([buildExportText()], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "storytelling-marketing-blueprint-data.txt";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      showToast("Data downloaded");
+    }
+
+    function updateAll() {
+      updatePositioningScores();
+      updateActionRows();
+      updateCompletion();
+      updateExportPreview();
+    }
+
+    document.querySelectorAll(".tab-button").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+      });
+    });
+
+    document.getElementById("saveBtn").addEventListener("click", () => saveProgress(false));
+    document.getElementById("loadBtn").addEventListener("click", loadProgress);
+    document.getElementById("printBtn").addEventListener("click", () => window.print());
+    document.getElementById("downloadBtn").addEventListener("click", downloadData);
+
+    document.addEventListener("input", event => {
+      if (event.target.matches(trackedSelector)) {
+        updateAll();
+        saveProgress(true);
+      }
+    });
+
+    document.addEventListener("change", event => {
+      if (event.target.matches(trackedSelector)) {
+        updateAll();
+        saveProgress(true);
+      }
+    });
+
+    updateAll();
+  </script>
+</body>
+</html>
