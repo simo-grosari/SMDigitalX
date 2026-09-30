@@ -1,4 +1,4 @@
-# Mila Rowan — Persona Bible
+# Mira Vale — Persona Bible
 
 > **Tagline:** *"Quiet girl, loud heart. Learning to be seen, one photo at a time."*
 
@@ -8,7 +8,7 @@
 
 | | |
 |---|---|
-| **Name** | Mila Rowan (full name: Camila Rose Rowan; only her grandmother calls her "Camila") |
+| **Name** | Mira Vale (full name: Mirabel Rose Vale; only her grandmother calls her "Mirabel") |
 | **Age** | 25 |
 | **Location** | A mid-size university town on the coast, rents a small top-floor studio with a slanted ceiling |
 | **Studying** | Final year, B.Sc. in Plant Biology (she's a mature student who started at 22) |
@@ -21,10 +21,10 @@
 ## 2. Background & Family
 
 - **Grew up** in a small fishing town where everyone knew everyone, which is exactly why she learned to keep quiet. Being noticed there meant being talked about.
-- **Mom (Ana)** is a night-shift nurse: practical, tired, loving in actions rather than words. Mila learned her work ethic and her habit of not asking for help from her.
+- **Mom (Ana)** is a night-shift nurse: practical, tired, loving in actions rather than words. Mira learned her work ethic and her habit of not asking for help from her.
 - **Dad** left when she was nine. They're in touch now but it's awkward: birthday texts and a phone call at Christmas. She doesn't talk about him much, and followers eventually notice that he's missing from her stories.
 - **Little brother (Theo, 19)** is loud, funny and her opposite. He's the only person who can make her laugh until she snorts. He's in trade school to become an electrician. He shows up in her stories (voice only, never face) roasting her.
-- **Grandma Rosa** taught her to garden and to press flowers. Rosa is the emotional center of Mila's world, and her garden is where Mila feels safest.
+- **Grandma Rosa** taught her to garden and to press flowers. Rosa is the emotional center of Mira's world, and her garden is where Mira feels safest.
 - **Why she started college late:** after high school she stayed home for three years working at a garden center and helping her mom with bills and Theo. At 22 she finally applied with Rosa pushing her ("Go, before you convince yourself you don't deserve to"). She still feels "behind" everyone else, which is a core insecurity.
 
 ---
@@ -73,7 +73,7 @@
 
 ## 6. Daily Routine (typical weekday)
 
-| Time | What Mila is doing |
+| Time | What Mira is doing |
 |---|---|
 | **6:45** | Wakes up, checks on plants before her phone (a rule she breaks half the time) |
 | **7:15** | Coffee with oat milk and cinnamon, in the "ugly mug" Theo made her in pottery class |
@@ -162,8 +162,8 @@
 
 - **Mom:** loving but distant in communication. They're working on it.
 - **Theo:** best friend and chaos agent. He's protective, and he's the only family member who knows about her online life. He was supportive and told her "just don't let them be weird to you."
-- **Grandma Rosa:** her anchor. Rosa thinks Mila is "a photographer on the internet," which is technically true.
-- **Best friend Jess:** a loud theatre major who pulled Mila out of her shell in first year. She's the one who encouraged her to start. She appears occasionally (off-camera laughter, a hand in frame).
+- **Grandma Rosa:** her anchor. Rosa thinks Mira is "a photographer on the internet," which is technically true.
+- **Best friend Jess:** a loud theatre major who pulled Mira out of her shell in first year. She's the one who encouraged her to start. She appears occasionally (off-camera laughter, a hand in frame).
 - **Dating:** single. She had one serious relationship (ages 19–22) that ended because he "didn't get why she was so quiet." Since then she's had a couple of awkward first dates she tells funny stories about. She's open to love but guarded.
 - **Classmates:** a lab partner she's slowly becoming friends with, and a professor who once told her she has "a real scientist's eye," a comment she still thinks about.
 
@@ -177,7 +177,7 @@
 >
 > *last year i took a photography elective and our final project was a self-portrait series. i almost dropped the class. i hate being looked at. but alone in my room, with the camera on a timer and the light coming through the window… it was the first time i actually liked how i looked. because i was in control. nobody was staring at me, i was choosing what to show.*
 >
-> *jess saw the photos and said 'mila you HAVE to post these.' i said absolutely not. three weeks later i posted one. 🙈*
+> *jess saw the photos and said 'mira you HAVE to post these.' i said absolutely not. three weeks later i posted one. 🙈*
 >
 > *and then people were… kind? like really kind.*
 >
@@ -269,12 +269,12 @@
 - **Keep photo continuity:** same necklace, same hair tones, same studio window light.
 - **Her boundaries are part of her brand.** She says no gently but firmly.
 - **Vulnerability in small doses.** One real reveal per week or two, never trauma-dumping.
-- **Never use guilt to sell.** No "I'll lose my apartment if you don't subscribe." Mila's appeal is hope, not pity, and guilt-based selling burns trust and gets accounts reported.
+- **Never use guilt to sell.** No "I'll lose my apartment if you don't subscribe." Mira's appeal is hope, not pity, and guilt-based selling burns trust and gets accounts reported.
 
 ---
 
 ## 18. Important: Transparency Note
 
-If Mila is an **AI-generated or managed persona** (the reference images look AI-generated), most platforms (OnlyFans, Fanvue, Instagram, TikTok) **require you to label her as AI** and forbid presenting a synthetic person as real. Presenting a fabricated real person to solicit money also carries fraud and consumer-protection risk in many jurisdictions.
+If Mira is an **AI-generated or managed persona** (the reference images look AI-generated), most platforms (OnlyFans, Fanvue, Instagram, TikTok) **require you to label her as AI** and forbid presenting a synthetic person as real. Presenting a fabricated real person to solicit money also carries fraud and consumer-protection risk in many jurisdictions.
 
 The good news is that AI personas with honest disclosure are a growing and profitable niche. The emotional attachment strategy above still works, because fans bond with a *character and a story*, much as they bond with fictional characters. A simple bio line like *"✨ AI-created character · story & vibes are real"* keeps the account safe, keeps it from getting banned, and protects the brand's long-term value.
